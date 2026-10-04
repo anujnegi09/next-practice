@@ -4,7 +4,7 @@ export default function About(){
     <>
     <h1>welcome to about page</h1>
     <Link href="/users">users</Link>{" "}
-    <Link href="/about">about</Link>
+    <Link href="/">home</Link>
     </>
     
     );
