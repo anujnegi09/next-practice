@@ -7,7 +7,7 @@ export default async function  Home({params, searchParams}){
     <h1>this is home page</h1>
      <Link href="/users">users</Link>{" "}
      <Link href="/about">about</Link>{" "}
-     <Link href="/=services">services</Link>
+     <Link href="/services">services</Link>
      
     </>
   )
