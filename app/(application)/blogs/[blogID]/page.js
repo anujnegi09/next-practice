@@ -7,24 +7,28 @@ export const dynamicParams = false;
 
 //use revalidate when your page content change over the time
 // export const revalidate = 5   //also can give false(but its bydefault false)
-export async function generateStaticParams(){
-    const response = await fetch("https://jsonplaceholder.typicode.com/posts/")
-    const data = await response.json()
-    return data.map(({id}) => ({blogID : `${id}` }));
-    // return[
-    //     {blogID : "1"},
-    //     {blogID : "2"},
-    //     {blogID : "3"},
 
-    // ];
-}
+
+// export async function generateStaticParams(){
+//     const response = await fetch("https://jsonplaceholder.typicode.com/posts/")
+//     const data = await response.json()
+//     return data.map(({id}) => ({blogID : `${id}` }));
+//     // return[
+//     //     {blogID : "1"},
+//     //     {blogID : "2"},
+//     //     {blogID : "3"},
+
+//     // ];
+// }
 
  const Blog = async ({params})=>{
     const {blogID}  = await params;
     console.log("blogID : ", blogID);
-    const response = await fetch("https://jsonplaceholder.typicode.com/posts/1",{
-        next : {revalidate : 5 }
-    })
+
+    // different way to use revalidate for icreamental site regeneration like we done in uper
+    // const response = await fetch("https://jsonplaceholder.typicode.com/posts/1",{
+    //     next : {revalidate : 5 }
+    // })
     return (
         <>
         <h2>data : {new Date().toLocaleString()}</h2>

@@ -1,5 +1,21 @@
 import Link from "next/link";
-export default function services(){
+import {cookies} from "next/headers";
+
+// 1rst way to make static page to dynamic page
+// export const dynamic = "force-dynamic";  // by default its "auto"
+
+
+export default async function services({searchParams}){
+
+    //2nd way to make static page to dynamic page
+    // const search = await searchParams;
+    // console.log(search);
+
+    //3rd way to make static page to dynamic page
+    // const myCookies = await cookies();
+    // console.log(myCookies);
+
+    console.log("Running services")
     return(
         <>
         <h1>All services</h1>
