@@ -2,8 +2,7 @@ import Link from "next/link";
 import {cookies} from "next/headers";
 
 // 1rst way to make static page to dynamic page
-// export const dynamic = "force-dynamic";  // by default its "auto"
-
+// export const dynamic = "force-dynamic";  // by default its "auto" also have other values
 
 export default async function services({searchParams}){
 
