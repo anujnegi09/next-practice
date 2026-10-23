@@ -1,7 +1,16 @@
-export default async function likes(){
-    // this is for stream in next 
-    await new Promise((resolve)=> setTimeout(resolve, 3000));
+// "use client"
+export default function likes(){
+    
+    // if(typeof window !== "undefined"){
+    //     console.log(window);
+    // }
+    console.log("like component")
     return (
-        <h3>30 likes</h3>
+
+        <div
+        // onclick will not give error in server even if we don't use "use client"
+         onClick={() =>{
+            console.log("like button clicked")
+        }}>30 likes</div>
     )
 }
